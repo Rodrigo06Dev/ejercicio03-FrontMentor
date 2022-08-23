@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+:root{
+--Strong-Cyan: hsl(171, 66%, 44%);
+--Light-Blue: hsl(233, 100%, 69%);
+--Dark-Grayish-Blue: hsl(210, 10%, 33%);
+--Grayish-Blue: #9fabb2;
+--Grayish-footer: #9fabb220;
+--color-font-boton: hsl(0, 0%, 100%);
+font-size: 18px;
+font-family: 'Bai Jamjuree', sans-serif;
+
+}
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1em;
+}
+.container__maxheader{
+    background-image: url(./images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    padding: 1em 0;
+}
+
+.container__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container__header h1{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.container__buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding-top: 2em;
+    padding-bottom: 6em;
+}
+
+.container__buttons button{
+    width: 60%;
+    height: 50px;
+    border-radius: 2em;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-font-boton);
+    
+}
+
+.container__buttons .iOS{
+    background-color: var(--Strong-Cyan);
+    border-color: var(--Strong-Cyan);
+}
+
+.container__buttons .Mac{
+    background-color: var(--Light-Blue);
+    border-color: var(--Light-Blue);
+}
+
+.container__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.container__info h2{
+    color: var(--Dark-Grayish-Blue);
+    font-weight: 600;
+    font-style: bold;
+}
+
+.container__info p{
+    color: var(--Grayish-Blue);
+    font-size: 15px;
+    font-weight: 400;
+    
+}
+
+.container__image{
+    display: center;
+    justify-content: center;
+    align-items: center;
+}
+.container__image img{
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+}
+
+.container__items{
+    text-align: center;
+    gap: 3em;
+    width: 80%;
+    margin: auto;
+}
+
+.container__items h3{
+    color: var(--Dark-Grayish-Blue);
+    font-weight: 600;
+    font-style: bold;
+    padding: 1em;
+}
+
+.container__items p{
+    color: var(--Grayish-Blue);
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 2em;    
+}
+
+.container__icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+    width: 80%;
+    margin: auto;
+    padding: 3em 0;
+}
+
+.container__icon{
+    
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container__icon h3{
+    color: var(--Dark-Grayish-Blue);
+    font-weight: 600;
+    font-style: bold;
+    padding: 1em;
+}
+
+.container__icon p{
+    color: var(--Grayish-Blue);
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 2em;    
+}
+
+.container__logos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 2em;
+    margin-bottom: 2em;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    background-color: var(--Grayish-footer);
+    padding-top: 1em;
+
+}
+
+footer .footer_logo{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+footer .footer_logo img{
+    width: 100%;
+    height: 100%;
+}
+
+footer .footer_text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--Grayish-Blue);
+    gap: 1rem;
+}
+
+footer .footer_socials{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2em;
+    width: 80%;
+}
+
+@media (min-width: 600px) {
+    .container__buttons button{
+        width: 300px;
+        
+    }
+}
+
+@media (min-width: 900px) {
+    .container{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(14,auto);
+        grid-template-areas: 
+        "mxhea mxhea mxhea mxhea"
+        ".   header  header    ."
+        ".   btn1     btn1     ."
+        ".   info1   info1     ."
+        "img1 img1   items items"
+        ".   info2   info2     ."
+        ".   img2     img2     ."
+        ".   info3   info3     ."
+        "ico  ico     ico    ico"
+        "log  log     log    log"
+        ".   info4   info4     ."
+        ".   btn2     btn2     ."
+        "foo  foo     foo    foo";
+    }
+
+    .container__buttons button{
+        width: 300px;
+        
+    }
+    .container__maxheader{
+        grid-area: mxhea; 
+        background-image: url(./images/bg-header-desktop.png);
+
+       
+    }
+    .container__header{
+        grid-area: header;
+    }
+    .btn1{
+        grid-area: btn1;
+    }
+
+    .info1{
+        grid-area: info1;
+    }
+    .img1{
+        grid-area: img1;
+    }
+
+    .container__items{
+        text-align: left;
+        grid-area: items;
+    }
+    .info2{
+        grid-area: info2;
+    }
+
+    .img2{
+        grid-area: img2;
+    }
+
+    .info3{
+        grid-area: info3;
+    }
+    .container__icons{
+        grid-area: ico;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .container__icon{
+        width: 33.33%;
+        
+    }
+    .container__logos{
+        grid-area: log;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 1em;
+    }
+
+    .info4{
+        grid-area: info4;
+    }
+
+    .btn2{
+        grid-area: btn2;
+    }
+    footer{
+        grid-area: foo;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: var(--Grayish-footer);
+        padding-top: 1em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    
+    }    
+   
+    footer .footer_logo{
+        grid-column: 1/2;
+        margin: auto;
+    }
+
+    footer .footer_text{
+        grid-column: 2/3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+    
+    footer .footer_socials{
+        grid-column: 3/4;
+        justify-content: end;
+        gap:2em;
+    }
+
+
+    
+}
